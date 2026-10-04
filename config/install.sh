@@ -4,6 +4,7 @@ echo "Installing packages..."
 sudo pacman -Syu --needed hyprland \
                 hyprland-qt-support \
                 xdg-desktop-portal-hyprland \
+                noctalia \
                 git \
                 base-devel \
                 flatpak \
