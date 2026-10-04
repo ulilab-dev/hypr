@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "dolphin"
+local file = "nautilus"
 local browser = "brave-origin"
 local browser-private = "brave-origin --incognito"
 local menu = "noctalia msg panel-toggle launcher"
@@ -36,7 +36,7 @@ hl.bind("SUPER + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
-hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
+hl.bind("SUPER + E", hl.dsp.exec_cmd(file))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browser-private))
 
