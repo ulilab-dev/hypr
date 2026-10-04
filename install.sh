@@ -12,7 +12,7 @@ sudo pacman -Syu --needed hyprland \
                 eza \
                 starship \
                 ttf-jetbrains-mono-nerd \
-                kitty \
+                foot \
                 vim \
                 micro \
                 qt5-wayland \
