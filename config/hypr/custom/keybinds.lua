@@ -3,7 +3,7 @@
 ---------------------
 
 -- Set programs that you use
-local terminal = "kitty"
+local terminal = "foot"
 local file = "nautilus"
 local browser = "brave-origin"
 local browser-private = "brave-origin --incognito"
