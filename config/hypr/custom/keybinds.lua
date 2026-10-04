@@ -45,6 +45,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
 hl.bind("SUPER+V", hl.dsp.exec_cmd(clipboard))
 hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(wallpaper))
 
+
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
