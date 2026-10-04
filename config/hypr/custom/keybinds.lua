@@ -46,16 +46,16 @@ hl.bind("SUPER+V", hl.dsp.exec_cmd(clipboard))
 hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(wallpaper))
 
 -- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }))
+hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
+hl.bind("SUPER + up", hl.dsp.focus({ direction = "up" }))
+hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }))
 
 -- Move focus and window
-hl.bind("SUPER+SHIFT+left", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER+SHIFT+right", hl.dsp.window.move({ direction = "right" }))
-hl.bind("SUPER+SHIFT+up", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER+SHIFT+down", hl.dsp.window.move({ direction = "down" }))
+hl.bind("SUPER + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind("SUPER + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind("SUPER + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind("SUPER + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
