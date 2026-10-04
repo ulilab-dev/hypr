@@ -18,12 +18,6 @@ local superMod = "SUPER+SHIFT"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 
--- closeWindowBind:set_enabled(false)
--- hl.bind(
---	mainMod .. " + M",
---	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
---)
-
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }))
