@@ -2,33 +2,43 @@
 ---- INPUT ----
 ---------------
 
-hl.config({
-    input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
+ hl.config({
+   input = {
+     -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
+     kb_layout = "us",
+     kb_options = "compose:caps,shift:both_capslock_cancel,grp:alts_toggle",
 
-        follow_mouse = 1,
-        accel_profile = "flat",
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
+     kb_variant = "",
 
-        touchpad = {
-            natural_scroll = false,
-        },
-    },
-})
+     -- Change speed of keyboard repeat.
+     repeat_rate = 40,
+     repeat_delay = 250,
 
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
+     -- Start with numlock on by default.
+     numlock_by_default = true,
 
--- Example per-device config
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
-hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
+     -- Increase sensitivity for mouse/trackpad (default: 0).
+     sensitivity = 0,
+
+     -- Turn off mouse acceleration (default: adaptive).
+     accel_profile = "flat",
+
+     touchpad = {
+       -- Use natural (inverse) scrolling.
+       natural_scroll = true,
+
+       -- Use two-finger clicks for right-click instead of lower-right corner.
+       clickfinger_behavior = true,
+
+       -- Control the speed of your scrolling.
+       scroll_factor = 0.4,
+
+       -- Enable the touchpad while typing.
+       disable_while_typing = false,
+
+       -- Left-click-and-drag with three fingers.
+       drag_3fg = 1,
+     },
+   },
+ })
