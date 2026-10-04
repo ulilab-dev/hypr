@@ -8,6 +8,7 @@ local file = "nautilus"
 local browser = "brave-origin"
 local browserprivate = "brave-origin --incognito"
 local menu = "noctalia msg panel-toggle launcher"
+local session = "noctalia msg panel-toggle session"
 local screenshots = "noctalia msg screenshot-region"
 local clipboard = "noctalia msg panel-toggle clipboard"
 local wallpaper = "noctalia msg panel-toggle wallpaper"
@@ -35,6 +36,7 @@ hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browserprivate))
 
 
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd(session))
 hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
 hl.bind("SUPER+V", hl.dsp.exec_cmd(clipboard))
 hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(wallpaper))
