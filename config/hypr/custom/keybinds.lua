@@ -1,13 +1,16 @@
 ---------------------
----- MY PROGRAMS ----
+------ DEFAULTS -----
 ---------------------
 
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "dolphin"
-local menu = "rofi -show drun"
-local emoji = "rofi -show emoji -config ~/.config/rofi/emoji.rasi"
-local waybarThemes = "~/.config/waybar/switch.sh"
+local browser = "brave-origin"
+local browser-private = "brave-origin --incognito"
+local menu = "noctalia msg panel-toggle launcher"
+local screenshots = "noctalia msg screenshot-region"
+local wallpaper = "noctalia msg panel-toggle wallpaper"
+local clipboard = "noctalia msg panel-toggle clipboard"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -17,25 +20,30 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local superMod = "SUPER+SHIFT"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind("CTRL+ALT+T", hl.dsp.exec_cmd(terminal))
-local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+
 -- closeWindowBind:set_enabled(false)
-hl.bind(
-	mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(superMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind("SUPER+L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/screenshot"))
-hl.bind("SUPER+V", hl.dsp.exec_cmd("~/.config/rofi/clipboard.sh"))
-hl.bind("SUPER+period", hl.dsp.exec_cmd(emoji))
-hl.bind(superMod .. " + T", hl.dsp.exec_cmd(waybarThemes))
-hl.bind(superMod .. " + W", hl.dsp.exec_cmd("~/.config/waybar/toggle_waybar.sh"))
-hl.bind("SUPER+W", hl.dsp.exec_cmd("waypaper"))
+--hl.bind(
+--	mainMod .. " + M",
+--	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+--)
+
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + P", hl.dsp.window.pseudo())
+hl.bind("SUPER + J", hl.dsp.layout("togglesplit")) -- dwindle only
+
+
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browser-private))
+
+
+hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
+hl.bind("SUPER+V", hl.dsp.exec_cmd(clipboard))
+hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(wallpaper))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
