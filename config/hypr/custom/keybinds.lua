@@ -6,8 +6,11 @@
 local terminal = "foot"
 local file = "nautilus"
 local browser = "brave-origin"
-local browser-private = "brave-origin --incognito"
-local ipc = "noctalia msg"
+local browserprivate = "brave-origin --incognito"
+local menu = "noctalia msg panel-toggle launcher"
+local screenshots = "noctalia msg screenshot-region"
+local clipboard = "noctalia msg panel-toggle clipboard"
+local wallpaper = "noctalia msg panel-toggle wallpaper"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -28,14 +31,14 @@ hl.bind("SUPER + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(file))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(browser))
-hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browser-private))
+hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browserprivate))
 
 
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
-hl.bind("SUPER+V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
-hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle wallpaper"))
-hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
+hl.bind("SUPER+V", hl.dsp.exec_cmd(clipboard))
+hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(wallpaper))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd("noctalia msg window-switcher hold"))
 
 
 -- Move focus with mainMod + arrow keys
@@ -71,9 +74,9 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("noctalia msg volume-up"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("noctalia msg volume-mute"))
 
 hl.bind(
 	"XF86AudioMicMute",
@@ -81,8 +84,8 @@ hl.bind(
 	{ locked = true, repeating = true }
 )
 
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("noctalia msg brightness-up"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("nocatlia msg brightness-down"))
 
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
