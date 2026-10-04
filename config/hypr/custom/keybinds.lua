@@ -26,12 +26,12 @@ hl.bind("SUPER + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(file))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd(browser-private))
 
 
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
 hl.bind("SUPER+V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind("CTRL+SUPER+SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle wallpaper"))
