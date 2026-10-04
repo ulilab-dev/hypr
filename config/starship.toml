@@ -1,0 +1,96 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+[](bg:#adb5bd fg:#ffffff)\
+$directory\
+[](fg:#adb5bd bg:#6c757d)\
+$git_branch\
+$git_status\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+[](fg:#6c757d bg:#343a40)\
+[ ](fg:#343a40)\
+\n$character"""
+
+[directory]
+style = "fg:#ffffff bg:#adb5bd"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol $branch ](fg:#ffffff bg:#6c757d)]($style)'
+
+[git_status]
+style = "bg:#6c757d"
+format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#6c757d)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#6c757d)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#6c757d)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#6c757d)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#6c757d)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#6c757d"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#6c757d)]($style)'
+
+[os]
+style = "bg:#ffffff fg:#000000"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol = "[❯](bold red)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
