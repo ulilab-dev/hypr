@@ -43,6 +43,8 @@ mkdir -p ~/.config
 
 cp -r config/* ~/.config/ && \
 
+sudo cp -r icons/* /usr/share/icons/
+
 if [ $? -eq 0 ]; then
   echo "Done []"
 else
