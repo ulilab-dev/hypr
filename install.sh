@@ -41,8 +41,7 @@ echo "Copying configuration files..."
 
 mkdir -p ~/.config
 
-cp -r fish/ hypr/ kitty/ ~/.config/ && \
-cp starship.toml ~/.config/
+cp -r config/* ~/.config/ && \
 
 if [ $? -eq 0 ]; then
   echo "Done []"
