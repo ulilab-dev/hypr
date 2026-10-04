@@ -11,5 +11,5 @@ hl.on("hyprland.start", function()
 -- Gtk & Icons  
   hl.exec_cmd('gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"')
   hl.exec_cmd('gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"')
-  hl.exec_cmd('gsettings set org.gnome.desktop.interface icon-theme "Yaru-Blue-dark"')
+  hl.exec_cmd('gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue-dark"')
 end)
