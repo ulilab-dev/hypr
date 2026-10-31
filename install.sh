@@ -48,5 +48,5 @@ sudo cp -r icons/* /usr/share/icons/
 if [ $? -eq 0 ]; then
   echo "Done []"
 else
-  echo "Meh! Failed to copy configs. []"
+  echo "Meh! Failed to copy config []"
 fi
